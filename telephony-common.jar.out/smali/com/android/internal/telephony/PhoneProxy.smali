@@ -551,7 +551,7 @@
 
     move-result-object v5
 
-    const v6, 0x10e0065
+    const v6, #android:integer@config_volte_replacement_rat#t
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -2786,7 +2786,7 @@
 
     move-result-object v3
 
-    const v4, 0x1120097
+    const v4, #android:bool@config_switch_phone_on_voice_reg_state_change#t
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -5234,4 +5234,17 @@
 
     .line 981
     return-void
+.end method
+
+.method public getRadioAccessFamily()I
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/telephony/PhoneProxy;->mActivePhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->getRadioAccessFamily()I
+
+    move-result v0
+
+    return v0
 .end method
