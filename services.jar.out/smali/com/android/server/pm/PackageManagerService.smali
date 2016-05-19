@@ -2433,6 +2433,7 @@
     invoke-virtual {v0, v4}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
     .line 1617
+    .line 1621
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2459,7 +2460,6 @@
 
     invoke-virtual {v0, v4}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 1621
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2488,16 +2488,13 @@
 
     invoke-static/range {v22 .. v22}, Lcom/android/server/pm/PackageManagerService$FlymePackageManagerServiceInjector;->addFlymeAlreadyDexOpted(Landroid/util/ArraySet;)V
 
-    .line 1628
     invoke-virtual/range {v45 .. v45}, Ljava/io/File;->list()[Ljava/lang/String;
 
     move-result-object v46
 
-    .line 1629
     .local v46, "frameworkFiles":[Ljava/lang/String;
     if-eqz v46, :cond_18
 
-    .line 1633
     move-object/from16 v23, v37
 
     .restart local v23    # "arr$":[Ljava/lang/String;
@@ -7464,19 +7461,19 @@
     :cond_8
     const/4 v3, 0x0
 
-    move-object/from16 v0, p0
+    #move-object/from16 v0, p0
 
-    move-object/from16 v1, p1
+    #move-object/from16 v1, p1
 
-    move-object/from16 v2, p2
+    #move-object/from16 v2, p2
 
-    move/from16 v3, p3
+    #move/from16 v3, p3
 
-    move/from16 v4, p5
+    #move/from16 v4, p5
 
-    invoke-static {v0, v1, v2, v3, v4}, Lcom/android/server/pm/PackageManagerService$FlymePackageManagerServiceInjector;->getResolveInfo(Lcom/android/server/pm/PackageManagerService;Landroid/content/Intent;Ljava/lang/String;II)Landroid/content/pm/ResolveInfo;
+    #invoke-static {v0, v1, v2, v3, v4}, Lcom/android/server/pm/PackageManagerService$FlymePackageManagerServiceInjector;->getResolveInfo(Lcom/android/server/pm/PackageManagerService;Landroid/content/Intent;Ljava/lang/String;II)Landroid/content/pm/ResolveInfo;
 
-    move-result-object v1
+    #move-result-object v1
 
     goto/16 :goto_0
 .end method
@@ -21224,7 +21221,6 @@
     return-void
 
     :cond_flyme_0
-
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -58285,35 +58281,6 @@
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService;->mHandler:Lcom/android/server/pm/PackageManagerService$PackageHandler;
 
     invoke-virtual {v2, v0}, Lcom/android/server/pm/PackageManagerService$PackageHandler;->sendMessage(Landroid/os/Message;)Z
-
-    return-void
-.end method
-
-.method static final sendPackageBroadcast(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/String;Landroid/content/IIntentReceiver;[I)V
-    .locals 7
-    .param p0, "action"    # Ljava/lang/String;
-    .param p1, "pkg"    # Ljava/lang/String;
-    .param p2, "extras"    # Landroid/os/Bundle;
-    .param p3, "targetPkg"    # Ljava/lang/String;
-    .param p4, "finishedReceiver"    # Landroid/content/IIntentReceiver;
-    .param p5, "userIds"    # [I
-
-    .prologue
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
-
-    const/4 v2, 0x0
-
-    move-object/from16 v3, p2
-
-    move-object/from16 v4, p3
-
-    move-object/from16 v5, p4
-
-    move-object/from16 v6, p5
-
-    invoke-static/range {v0 .. v6}, Lcom/android/server/pm/PackageManagerService;->sendPackageBroadcast(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/String;Landroid/content/IIntentReceiver;[I)V
 
     return-void
 .end method
