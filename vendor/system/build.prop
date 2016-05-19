@@ -17,6 +17,7 @@ ro.build.tags=test-keys
 ro.build.flavor=cm_aries-userdebug
 ro.product.brand=Xiaomi
 ro.product.name=aries
+ro.product.device=aries
 ro.product.board=MSM8960
 # ro.product.cpu.abi and ro.product.cpu.abi2 are obsolete,
 # use ro.product.cpu.abilist instead.
