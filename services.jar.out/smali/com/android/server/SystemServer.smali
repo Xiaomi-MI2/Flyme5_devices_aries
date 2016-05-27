@@ -3234,9 +3234,7 @@
     #move-object/from16 v0, v114
 
     #invoke-direct {v0, v3}, Lcom/android/server/ThemeService;-><init>(Landroid/content/Context;)V
-        
     const/16 v114, 0x0
-
     :try_end_3f
     .catch Ljava/lang/Throwable; {:try_start_3f .. :try_end_3f} :catch_27
 
