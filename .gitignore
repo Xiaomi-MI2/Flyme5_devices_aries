@@ -4,3 +4,4 @@ board
 /out/*
 /history_package/*
 *~
+*.pyc
