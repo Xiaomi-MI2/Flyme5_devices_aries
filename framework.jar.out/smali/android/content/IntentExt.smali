@@ -12,6 +12,8 @@
 
 .field public static final ACTION_MSIM_MODE_CHANGED:Ljava/lang/String; = "android.intent.action.MSIM_MODE"
 
+.field public static final ACTION_PROXIMITY_SCREEN_OFF:Ljava/lang/String; = "android.intent.action.PROXIMITY_SCREEN_OFF"
+
 .field public static final ACTION_RECOMMEND:Ljava/lang/String; = "android.intent.action.RECOMMEND"
 
 .field public static final ACTION_SCREEN_OFF_FOR_FINGERPRINT:Ljava/lang/String; = "android.intent.action.SCREEN_OFF_FOR_FINGERPRINT"
@@ -43,6 +45,8 @@
 .field public static final MZ_ACTION_ACCOUNT_ACCOUNTCENTER:Ljava/lang/String; = "com.meizu.account.ACCOUNTCENTER"
 
 .field public static final MZ_ACTION_APP_DOWN_PROMPT:Ljava/lang/String; = "meizu.intent.action.APP_DOWNLOAD_PROMPT"
+
+.field public static final MZ_ACTION_CLEAR_ALL_NOTIFICATION:Ljava/lang/String; = "meizu.intent.action.CLEAR_ALL_NOTIFICATIONS"
 
 .field public static final MZ_ACTION_DEVICE_CONNECTION_STATE_CHANGED:Ljava/lang/String; = "meizu.intent.action.DEVICE_CONNECTION_STATE_CHANGED"
 
@@ -138,7 +142,11 @@
 
 .field public mAccessPackageName:Ljava/lang/String;
 
+.field public mAccessSrcClassName:Ljava/lang/String;
+
 .field public mAccessSrcFlags:I
+
+.field public mAccessSrcPackageName:Ljava/lang/String;
 
 .field public mMeizuFlags:I
 
@@ -267,6 +275,44 @@
 
     .prologue
     iput p1, p0, Landroid/content/IntentExt;->mAccessSrcFlags:I
+
+    return-void
+.end method
+
+.method public getAccessSrcClassName()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/content/IntentExt;->mAccessSrcClassName:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getAccessSrcPackageName()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/content/IntentExt;->mAccessSrcPackageName:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public setAccessSrcClassName(Ljava/lang/String;)V
+    .locals 0
+    .param p1, "className"    # Ljava/lang/String;
+
+    .prologue
+    iput-object p1, p0, Landroid/content/IntentExt;->mAccessSrcClassName:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setAccessSrcPackageName(Ljava/lang/String;)V
+    .locals 0
+    .param p1, "packageName"    # Ljava/lang/String;
+
+    .prologue
+    iput-object p1, p0, Landroid/content/IntentExt;->mAccessSrcPackageName:Ljava/lang/String;
 
     return-void
 .end method
