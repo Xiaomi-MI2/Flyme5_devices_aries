@@ -74,7 +74,7 @@ vendor_saved_apps := Bluetooth BluetoothExt CaptivePortalLogin KeyChain HTMLView
 # You need to decode android.policy.jar to the project directory (use apktool d android.policy.jar) first,
 # and then you can make it by:   make android.policy
 #-----------------------------------------------------------------------------
-vendor_modify_jars := android.policy framework services telephony-common wifi-service org.cyanogenmod.platform
+vendor_modify_jars := android.policy framework services telephony-common wifi-service
 
 ##############################################################################
 # The value decides which board system directory you want to save.
@@ -107,7 +107,7 @@ board_remove_apps := LogReport NfcNci Tag
 # The command idtoname how to use: first use "apktool d source/system/framework/framework-res.apk other/TMP/framework-res",
 # and then use "idtoname other/TMP/framework-res/res/values/public_master.xml XXXX/smali"(XXXX is the directory where you decode board system apk).
 #-----------------------------------------------------------------------------
-board_modify_apps := FlymeLauncher TeleService SystemUI Settings
+board_modify_apps := Telecom TeleService SystemUI Settings MzCallSetting
 
 ##############################################################################
 # The value decides which jar you want to modify, when the jar is based on the board framework jar.
